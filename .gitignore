@@ -1,0 +1,6 @@
+venv/
+*.sqlite
+jupyterhub_cookie_secret
+jupyterhub-proxy.pid
+notebooks/
+__pycache__/
