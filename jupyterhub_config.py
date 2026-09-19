@@ -33,3 +33,5 @@ c.DummyAuthenticator.password = "secret123"
 c.JupyterHub.bind_url = 'http://127.0.0.1:8000'
 c.JupyterHub.hub_ip = '127.0.0.1'
 c.JupyterHub.hub_port = 8081
+
+c.Spawner.args = ['--ServerApp.terminado_settings={"shell_command": ["powershell.exe"]}']
