@@ -1,4 +1,4 @@
-import sys
+﻿import sys
 import os
 import asyncio
 from jupyterhub.spawner import SimpleLocalProcessSpawner
@@ -20,8 +20,7 @@ c.JupyterHub.spawner_class = WindowsSpawner
 c.Spawner.cmd = [sys.executable, '-m', 'jupyterhub.singleuser']
 c.Spawner.ip = '127.0.0.1'
 
-# Використовуємо прямі слеші без подвійного екранування:
-c.Spawner.notebook_dir = 'C:/jupyterhub/notebooks'
+# Р’РёРєРѕСЂРёСЃС‚РѕРІСѓС”РјРѕ РїСЂСЏРјС– СЃР»РµС€С– Р±РµР· РїРѕРґРІС–Р№РЅРѕРіРѕ РµРєСЂР°РЅСѓРІР°РЅРЅСЏ:
 c.Spawner.default_url = '/lab'
 
 c.Spawner.start_timeout = 180
@@ -35,3 +34,5 @@ c.JupyterHub.hub_ip = '127.0.0.1'
 c.JupyterHub.hub_port = 8081
 
 c.Spawner.args = ['--ServerApp.terminado_settings={"shell_command": ["powershell.exe"]}']
+c.Authenticator.admin_users = {'testuser'}
+c.Spawner.notebook_dir = r'G:\Мой диск\JupyterHub_Workspaces'
